@@ -8,6 +8,7 @@ body{
     margin: 0 auto;
     padding: 10px;
     font-weight: bold;
+    position: relative;
 }
 
 .border {
@@ -80,6 +81,11 @@ h1 {
 
 footer {
     padding: 0 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    right: 0;
+    left: 0;
 }
 
 
