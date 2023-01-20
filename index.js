@@ -1,8 +1,14 @@
 import Contents from './modules/Content.js';
 import UI from './modules/UI.js';
+import { DateTime } from './modules/Luxon.js';
 
 window.addEventListener('load', () => {
   const dom = new UI();
+
+  // set date
+  setInterval(() => {
+    document.querySelector('.date').textContent = DateTime.now().toFormat('MMMM dd yyyy, tt');
+  }, 1000);
 
   // load books
   dom.loadBooks();
