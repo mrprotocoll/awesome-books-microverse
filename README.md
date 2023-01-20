@@ -116,9 +116,7 @@ Open the index.html file using a web browser
 
 <!-- Features -->
 
-### Key Features <a name="future-features"></a>
-
-> Features of the application.
+### Future Features <a name="future-features"></a>
 
 - **Mobile resonsiveness**
 - **Ability to store books in Database**
