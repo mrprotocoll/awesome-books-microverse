@@ -9,7 +9,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
   - [🚀 Live Demo](#live-demo)
-  - [🚀 Project Live Presentation](#loom-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -26,15 +25,11 @@
 
 # 📖 Awesome Book Project <a name="about-project"></a>
 
-> Describe of project.
-
 **Awesome Books Project** is a single webpage that enables the adding and removal of book to and from the list of books.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
-
-> Description of the tech stacks used
 
 <details>
   <summary>Client</summary>
@@ -48,8 +43,6 @@
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
-
-> Features of the application.
 
 - **Single page**
 - **Local storage**
@@ -121,6 +114,17 @@ Open the index.html file using a web browser
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- Features -->
+
+### Key Features <a name="future-features"></a>
+
+> Features of the application.
+
+- **Mobile resonsiveness**
+- **Ability to store books in Database**
+- **High fidelity design**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 
