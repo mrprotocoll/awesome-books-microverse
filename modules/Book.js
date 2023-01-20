@@ -1,36 +1,35 @@
 export default class Book {
-    
-    constructor() {
-        this.books = JSON.parse(localStorage.getItem("books")) ?? []
-    }
+  constructor() {
+    this.books = JSON.parse(localStorage.getItem('books')) ?? [];
+  }
 
-    toUpper(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1)
-    }
+  static toUpper(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
 
-    add(title, author) {
-        (this.books).push({
-            "id" :  (new Date()).getTime(),
-            "title" : this.toUpper(title),
-            "author" : this.toUpper(author)
-        })
-        this.save()
-    }
+  add(title, author) {
+    (this.books).push({
+      id: (new Date()).getTime(),
+      title: Book.toUpper(title),
+      author: Book.toUpper(author),
+    });
+    this.save();
+  }
 
-    getBooks() {
-        return this.books
-    }
+  getBooks() {
+    return this.books;
+  }
 
-    setBooks(books){
-        this.books = books
-    }
+  setBooks(books) {
+    this.books = books;
+  }
 
-    remove(id) {
-        this.setBooks(this.books.filter(book => book.id != id))
-        this.save()
-    }
+  remove(id) {
+    this.setBooks(this.books.filter((book) => book.id !== Number(id)));
+    this.save();
+  }
 
-    save() {
-        return localStorage.setItem('books',JSON.stringify(this.books))
-    }
+  save() {
+    return localStorage.setItem('books', JSON.stringify(this.books));
+  }
 }

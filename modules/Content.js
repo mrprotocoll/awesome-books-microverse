@@ -2,22 +2,22 @@
 const bookList = (data) => `<li class="book">
     <p>"${data.title}" by ${data.author}</p>
     <button data-id="${data.id}" class="btn remove-book">Remove</button>
-    </li>`
+    </li>`;
 
-//book
+// book
 const books = (data) => {
-    let allBooks = ""
-    data.forEach(element => {
-        allBooks += bookList(element)
-    });
+  let allBooks = '';
+  data.forEach((element) => {
+    allBooks += bookList(element);
+  });
 
-    return `<h1>All Awesome Books</h1>
+  return `<h1>All Awesome Books</h1>
     <div class="">
         <ul class="book-lists border">
             ${allBooks}
         </ul>
-    </div>`
-}
+    </div>`;
+};
 
 // add new
 const addBook = `<h1>Add New Books</h1>
@@ -28,7 +28,7 @@ const addBook = `<h1>Add New Books</h1>
             <button class="btn add-book">Add</button>
             <div class="clear"></div>
         </form>
-    </div>`
+    </div>`;
 
 // contact
 const contact = `<h1>Contact Information</h1>
@@ -42,8 +42,8 @@ const contact = `<h1>Contact Information</h1>
             <li>Our address: Streetname 22, 76655 city, Nigeria</li>
         </ul>
     </div>
-</div>`
+</div>`;
 
 export default {
-    books,addBook,contact
-}
+  books, addBook, contact,
+};
