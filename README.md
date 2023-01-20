@@ -115,12 +115,11 @@ Open the index.html file using a web browser
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Features -->
+## 🔭 Future Features <a name="future-features"></a>
 
-### Future Features <a name="future-features"></a>
-
-- **Mobile resonsiveness**
-- **Ability to store books in Database**
-- **High fidelity design**
+- [ ] **[Mobile resonsiveness]**
+- [ ] **[Ability to store books in Database]**
+- [ ] **[High fidelity design]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
