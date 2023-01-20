@@ -11,6 +11,10 @@ body{
     position: relative;
 }
 
+main {
+    margin-bottom: 40px;
+}
+
 .border {
     border:3px solid black;
 }
@@ -81,7 +85,7 @@ h1 {
 
 footer {
     padding: 0 20px;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     right: 0;

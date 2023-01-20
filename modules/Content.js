@@ -1,7 +1,7 @@
 // list
 const bookList = (data) => `<li class="book">
     <p>"${data.title}" by ${data.author}</p>
-    <button class="btn  remove">Remove</button>
+    <button data-id="${data.id}" class="btn remove-book">Remove</button>
     </li>`
 
 //book
@@ -20,9 +20,9 @@ const books = (data) => {
 }
 
 // add new
-const addBook = `<h1>All Awesome Books</h1>
+const addBook = `<h1>Add New Books</h1>
     <div class="inner-content">
-        <form action="" class="book-form">
+        <form id="book-form" class="book-form">
             <input type="text" id="book-title" placeholder="Title">
             <input type="text" id="book-author" placeholder="Author">
             <button class="btn add-book">Add</button>

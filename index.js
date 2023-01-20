@@ -1,20 +1,28 @@
 import contents from './modules/Content.js'
+import UI from "./modules/UI.js"
 window.addEventListener('load', () => {
+    const dom = new UI()
     const pageContent = document.querySelector("#page-content")
-    // load lists
-    pageContent.innerHTML = contents.books([{"title": "my book","author": "Dami"}])
-    
-    // control navifations
+    const form = document.getElementById("book-form")
+    // load books
+    dom.loadBooks()
+
+    // control list navigations
     document.querySelector("#nav-lists").addEventListener("click", () => {
-        pageContent.innerHTML = contents.books([{"title": "my book","author": "Dami"}])
+        dom.loadBooks()
     })
 
-    // control add new
+    // control add new navigation
     document.querySelector("#nav-add").addEventListener("click", () => {
-        pageContent.innerHTML = contents.addBook
+        dom.loadContent(contents.addBook).then(() => {
+            document.getElementById("book-form").addEventListener("submit",function(e){
+                e.preventDefault()
+                dom.addNewBook()
+            })
+        })
     })
 
-    // control add new
+    // control contact navigation
     document.querySelector("#nav-contact").addEventListener("click", () => {
         pageContent.innerHTML = contents.contact
     })

@@ -1,15 +1,36 @@
-export class Book {
+export default class Book {
     
-    constructor(title, author) {
-        this.title = title.charAt(0).toUpperCase();
-        this.author = author
+    constructor() {
+        this.books = JSON.parse(localStorage.getItem("books")) ?? []
     }
 
-    add() {
-
+    toUpper(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1)
     }
 
-    remove() {
+    add(title, author) {
+        (this.books).push({
+            "id" :  (new Date()).getTime(),
+            "title" : this.toUpper(title),
+            "author" : this.toUpper(author)
+        })
+        this.save()
+    }
 
+    getBooks() {
+        return this.books
+    }
+
+    setBooks(books){
+        this.books = books
+    }
+
+    remove(id) {
+        this.setBooks(this.books.filter(book => book.id != id))
+        this.save()
+    }
+
+    save() {
+        return localStorage.setItem('books',JSON.stringify(this.books))
     }
 }
