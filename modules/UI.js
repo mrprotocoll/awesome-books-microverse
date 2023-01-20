@@ -8,7 +8,8 @@ export default class UI {
     addNewBook() {
         const title = document.querySelector("#book-title")
         const author = document.querySelector("#book-author")
-        return this.book.add(title.value,author.value)
+        this.book.add(title.value,author.value)
+        this.loadBooks()
          
     }
 
